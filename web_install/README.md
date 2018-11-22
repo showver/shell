@@ -1,6 +1,6 @@
 # 使用帮助  
 1、web_install.sh只是安装脚本，还需要下载软件包。  
-2、该脚本仅支持离线安装、仅适用rhel7/centos7系统。  
+2、该脚本仅支持离线安装、仅适用*rhel7/centos7*系统。  
 3、Usage:sh web_install.sh  
 4、md5sum web_install_v1.8.tar.gz   
 ***634f32d90ea775975c380bbe80da01f9  web_install_v1.8.tar.gz***  
