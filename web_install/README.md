@@ -3,7 +3,7 @@
 2、该脚本仅支持离线安装、仅适用rhel7/centos7系统。  
 3、Usage:sh web_install.sh  
 4、md5sum web_install_v1.8.tar.gz   
-*634f32d90ea775975c380bbe80da01f9  web_install_v1.8.tar.gz*  
+***634f32d90ea775975c380bbe80da01f9  web_install_v1.8.tar.gz***  
 5、软件包下载地址：https://drive.google.com/file/d/15dXLjogUHXveybOd4-_BuhhThqO8yD5Q/view?usp=sharing  
 
 # 相关信息  
