@@ -42,11 +42,11 @@ if [ $flag -eq 1 ];then
 fi
 
 #判断用户输入的网卡接口名是否当前系统存在的方法2：（grep）
-if [ ! `ls /sys/class/net | grep -w "$ethn"` ];then
-  echo "[$ethn] is not in the system!"
-  exit 1
-fi
- 
+#if [ ! `ls /sys/class/net | grep -w "$ethn"` ];then
+#  echo "[$ethn] is not in the system!"
+#  exit 1
+#fi
+
 while true
 do
  RX_pre=$(cat /proc/net/dev | grep $ethn | sed 's/:/ /g' | awk '{print $2}')
