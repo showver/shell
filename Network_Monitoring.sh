@@ -10,13 +10,42 @@
 
 
 #!/bin/bash
+clear
 echo "----------------------------------------------------------------------------------------------------"
 echo "          This is all the network interfaces in your system!                    "
-echo "$(ip link)"
+array=($(ls /sys/class/net))
+for i in ${array[*]}
+do
+  echo $i
+done
 echo "----------------------------------------------------------------------------------------------------"
 echo -e "\e[4;32mPlease Choose the interface you want to monitor:\e[0m"
 read interface
 ethn=$interface
+
+#判断用户输入的网卡接口名是否当前系统存在的方法1：（标志位）
+array_sum=${#array[*]}
+flag=0
+for ((i=0;i<$array_sum;i++))
+do
+  if [ "$ethn" == "${array[i]}" ];then
+    flag=0
+	break
+  else
+    flag=1
+  fi
+done
+
+if [ $flag -eq 1 ];then
+  echo "[$ethn] is not in the system!"
+  exit 1
+fi
+
+#判断用户输入的网卡接口名是否当前系统存在的方法2：（grep）
+if [ ! `ls /sys/class/net | grep -w "$ethn"` ];then
+  echo "[$ethn] is not in the system!"
+  exit 1
+fi
  
 while true
 do
