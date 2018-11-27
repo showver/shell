@@ -2,7 +2,7 @@
  **********************************************************
  * Author        : Lifa
  * Email         : 991179382@qq.com
- * Last modified : 2018-07-26 10:33
+ * Last modified : 2018-11-27 10:33
  * Filename      : Network_Monitoring.sh
  * Description   : 监控网速
  * *******************************************************
@@ -11,14 +11,15 @@
 
 #!/bin/bash
 clear
-echo "----------------------------------------------------------------------------------------------------"
-echo "          This is all the network interfaces in your system!                    "
-array=($(ls /sys/class/net))
-for i in ${array[*]}
+echo "This is all the network interfaces in your system:"
+echo "--------------------------------------------------"
+array=($(ls /sys/class/net))    #查看系统的网卡接口并将输出传入数组array中
+for i in ${array[*]}    #for循环遍历输出每个数组中的变量
 do
-  echo $i
+  echo -n "$i  "    #-n代表不换行输出
 done
-echo "----------------------------------------------------------------------------------------------------"
+echo ""
+echo "--------------------------------------------------"
 echo -e "\e[4;32mPlease Choose the interface you want to monitor:\e[0m"
 read interface
 ethn=$interface
@@ -75,16 +76,14 @@ do
  fi
 
 clear
- echo "Lifa's network interface traffic monitoring tool"
- echo "Now the time is $(date "+%Y-%m-%d %H:%M:%S")"
- echo "============================================="
- echo -e "Interface:$ethn"
+ echo "Lifa's Network_Monitoring tool"
+ echo "Time: $(date "+%Y-%m-%d %H:%M:%S")"
+ echo "================================================="
+ echo -e "Interface:[$ethn]"
  echo -e "RX:\e[1;34m$RX\e[0m TX:\e[1;34m$TX\e[0m"
- echo "=============================================="
- echo "Tip1: Press CTRL + C to exit!"
- echo "Tip2: TX为上行流量、RX为下行流量"
- echo "TX代表传送数据，RX是接收数据"
- echo "Transmit 和 Receive 的缩写"
-
+ echo "================================================="
+ echo "Tip: TX为上行流量(Transmit传送数据)、RX为下行流量(Receive接收数据)"
+ echo ""
+ echo "Press CTRL + C to exit..."
 done
 
