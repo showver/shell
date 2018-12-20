@@ -66,8 +66,9 @@ esac
 main(){
  while true
  do
-  menu
-  fruit
+   menu
+   fruit
  done
 }
+
 main
