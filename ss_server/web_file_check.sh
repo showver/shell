@@ -15,8 +15,8 @@
 #执行web_file_check.sh前请先将web目录的文件hash一遍
 #Example:
 #WORK_DIR="/opt"
-#ls -la /var/www/html/data > /tmp/site_num.txt
-#find /var/www/html/data/. -type f -print0 | xargs -0 md5sum > /tmp/checkmd5.db
+#ls -la /var/www/html/data > $WORK_DIR/site_num.txt
+#find /var/www/html/data/. -type f -print0 | xargs -0 md5sum > $WORK_DIR/checkmd5.db
 #echo "SAFE" > $WORK_DIR/if_web_safe.flag
 
 #!/bin/bash
