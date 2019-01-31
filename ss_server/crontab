@@ -1,0 +1,13 @@
+59 23 * * * /usr/bin/bash /opt/ntp.sh
+* * * * * /usr/bin/bash /opt/web_mes_send.sh
+* * * * * sleep 5;/usr/bin/bash /opt/web_file_check.sh
+* * * * * sleep 10;/usr/bin/bash /opt/web_file_check.sh
+* * * * * sleep 15;/usr/bin/bash /opt/web_file_check.sh
+* * * * * sleep 20;/usr/bin/bash /opt/web_file_check.sh
+* * * * * sleep 25;/usr/bin/bash /opt/web_file_check.sh
+* * * * * sleep 30;/usr/bin/bash /opt/web_file_check.sh
+* * * * * sleep 35;/usr/bin/bash /opt/web_file_check.sh
+* * * * * sleep 40;/usr/bin/bash /opt/web_file_check.sh
+* * * * * sleep 45;/usr/bin/bash /opt/web_file_check.sh
+* * * * * sleep 50;/usr/bin/bash /opt/web_file_check.sh
+* * * * * sleep 55;/usr/bin/bash /opt/web_file_check.sh
