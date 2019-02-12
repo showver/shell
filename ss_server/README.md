@@ -59,7 +59,15 @@
 *nali备用1：http://www.dwhd.org/wp-content/uploads/2015/08/nali-0.2.tar.gz*  
 *nali备用2：https://drive.google.com/open?id=1HsZbeL1_4avnY8SXZH63H9CBo20TCsec*
 
-## 五、双重认证
+## 五、web目录文件篡改检测
+```web_file_check.sh``主脚本`
+```web_check_log_seg.sh```日志分割脚本
+```web_mes_send.sh```篡改邮件通告脚本
+
+## 六、计划任务
+```crontab```
+
+## 七、双重认证
 #### 1、使用yum安装google-authenticator  
 ```yum install epel-release google-authenticator pam-devel -y```  
 *补充：编译安装google-authenticator：https://github.com/google/google-authenticator-libpam/*  
@@ -78,7 +86,7 @@
 ```ChallengeResponseAuthentication yes```  
 ```systemctl restart sshd```  
 
-## 六、补充
+## 八、补充
 #### 补充1：ssh爆破脚本
 
 > ```/opt/ssh_crack.sh```脚本已上传至Github中。  
