@@ -60,9 +60,9 @@
 *nali备用2：https://drive.google.com/open?id=1HsZbeL1_4avnY8SXZH63H9CBo20TCsec*
 
 ## 五、web目录文件篡改检测
-```web_file_check.sh```主脚本（有BUG）
-```web_check_log_seg.sh```日志分割脚本
-```web_mes_send.sh```篡改邮件通告脚本
+```web_file_check.sh```主脚本（有BUG）  
+```web_check_log_seg.sh```日志分割脚本  
+```web_mes_send.sh```篡改邮件通告脚本  
 
 ## 六、计划任务
 ```crontab```
